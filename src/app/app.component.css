@@ -9,21 +9,22 @@
   
   .form {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    width: 350px;
   }
   
   .input-box {
-    flex: 1;
-    padding: 10px 15px;
+    padding: 12px;
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
     outline: none;
-    transition: 0.3s;
+    transition: border-color 0.3s ease-in-out;
     font-family: 'Courier New', Courier, monospace;
   }
   
@@ -32,14 +33,14 @@
   }
   
   .btn {
-    padding: 10px 15px;
+    padding: 12px;
     font-size: 16px;
     color: white;
     background: #009cda;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease-in-out;
     font-family: 'Courier New', Courier, monospace;
   }
   
@@ -47,15 +48,19 @@
     background: #ccc;
     cursor: not-allowed;
   }
-  .result-text {
+  
+  .result-container {
+    margin-top: 20px;
+    background: #f3f3f3;
+    padding: 12px;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 15px;
     text-align: center;
+  }
+  
+  .result-text {
     font-size: 18px;
     color: #333;
     font-family: 'Courier New', Courier, monospace;
   }
-  .result-container{
-    background: #f3f3f367;
-    border: 1px solid rgb(150, 150, 150);
-    height: 8vh;
-    border-radius: 15px;
-  }
+  

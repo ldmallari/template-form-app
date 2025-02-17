@@ -1,9 +1,16 @@
 <div class="form-container">
   <form (ngSubmit)="onSubmit()" class="form">
-    <input class="input-box" type="text" name="username" [(ngModel)]="anytext" placeholder="Enter text..." required>
-    <button class="btn" type="submit" [disabled]="!anytext">Submit</button>
+    <input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Enter Username" required>
+    <input class="input-box" type="email" name="email" [(ngModel)]="email" placeholder="Enter Email" required>
+    <input class="input-box" type="password" name="password" [(ngModel)]="password" placeholder="Enter Password" required>
+    <input class="input-box" type="number" name="age" [(ngModel)]="age" placeholder="Enter Age" required>
+    <button class="btn" type="submit" [disabled]="!username || !email || !password || !age">Submit</button>
   </form>
 </div>
-<div class="result-container">
-<p *ngIf="submitted" class="result-text">You have entered: <strong>{{ anytext }}</strong></p>
+
+<div class="result-container" *ngIf="submitted">
+  <p class="result-text">
+    You have entered: <strong>{{ username }}</strong>, <strong>{{ email }}</strong>, 
+    <strong>{{ password }}</strong>, <strong>{{ age }}</strong>
+  </p>
 </div>

@@ -12,7 +12,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'template-form-app';
-  anytext: string = "";
+  username: string = "";
+  email: string = "";
+  password: string = "";
+  age: number | null = null;
   submitted: boolean = false;
 
   onSubmit() {
